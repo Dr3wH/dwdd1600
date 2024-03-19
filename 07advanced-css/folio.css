@@ -1,0 +1,285 @@
+body {
+    font-family: 'REM', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+}
+
+header {
+    background-color: #dfdbd3;
+    padding: 1rem 2%;
+    display: flex;
+    
+    /*dont use percent on top and bottom*/
+}
+
+header div {
+    padding-left: 1.2vw;
+}
+
+
+
+header h1 {
+    margin: 0;
+    color: #312b38;
+    letter-spacing: .7px;
+    
+}
+
+header p {
+    margin: 0;
+    color: #312b38;
+    letter-spacing: .5px;
+    
+}
+
+
+
+
+/*nav stuff*/
+
+/*small screens*/
+@media only screen and (max-width: 600px) {
+    nav ul {
+        margin: 0;
+        padding: 0 2%;
+        list-style-type: none;
+    }
+    
+    nav a {
+        display: block;
+        padding: .8rem;
+        text-decoration: none;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        border-bottom: solid 1px #312b38;
+        color: #312b38;
+    }
+    
+    nav .active a {
+        background-color: #e62320;
+        background-image: linear-gradient(to bottom, #e62320, #cb211e);
+            /* add to right, etc to make gradient go different directions
+        only on small*/
+        color: white;
+    }
+} /*end of media query (to bottom, #e62320, #10A2A0)*/
+
+/*big screens*/
+@media only screen and (min-width: 601px) {
+   
+    nav{
+    background-color: #e62320;
+    
+}
+nav ul {
+    list-style-type: none;
+    padding: 0 2%;
+    margin: 0;
+    display: flex;
+}
+nav ul li a {
+    font-size: 1.3rem;
+    text-decoration: none; /*got rid of line under link*/
+    color: #312b38;
+    font-weight: 700;
+    display: block;
+    padding: .85rem 3rem;
+}
+nav li.active a{
+    background-color: #dfdbd3;
+    color: #312b38;
+}
+nav a:hover {
+    color: #dfdbd3;
+}
+} /*end of media query*/
+
+
+
+
+
+
+/*stuff for the main*/
+main {
+    padding: 1rem 2vw
+}
+
+main h1 {
+    color: #312b38;
+}
+
+main h2 {
+    color: #312b38;
+    margin-bottom: .2rem;
+}
+
+main p {
+    color: #312b38;
+    margin: 0 0 .3rem 0;;
+}
+
+main ol {
+    padding: .5rem 3vw;
+    background-color: #dfdbd3;
+}
+
+main dl dt {
+    color:#e62320;
+    font-weight: 700;
+    background-color: #dfdbd3;
+    padding: .25rem 1vw;
+    
+}
+
+main dl dd {
+    color: #312b38;
+    font-size: .9rem;
+    padding: .25rem 1vw;
+}
+
+/*changes style of bullet*/
+main ul{
+    list-style-type: disc; 
+}
+
+main li {
+    line-height: 125%;
+    margin-bottom: .5rem;
+    font-size: .9rem;
+}
+
+main address {
+    font-style: normal;
+    background-color: #9CCCCC;
+    padding: .5rem;
+    width: 12.5rem;
+    border: 1px solid #312b38;
+    border-radius: 2px;
+}
+
+main a {
+    color: #312b38;
+    
+}
+
+main a:hover {
+    color: #e62320;
+    
+}
+
+main address a:hover {
+    color: #10A2A0;
+    
+}
+
+.sitehero {
+    width: 100%;
+    margin: 0;
+}
+
+.sitehero img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+/*images css*/
+
+figure.wrapped {
+    width:30%;
+    margin: 0 0 0 2%;
+    float: right;
+    border: 1px solid #312b38; 
+}
+
+figure.wrapped img {
+    width: 100%;
+    height: auto;
+}
+
+figure.wrapped figcaption {
+    text-align: center;
+    font-size: .75rem;
+}
+
+div.gallery {
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+div.gallery figure {
+    margin: .5rem 2% 0 0;
+    border: 1px solid #312b38;
+}
+
+div.gallery figcaption {
+    text-align: center;
+    font-size: .9rem;
+    color: #312b38;
+    padding: 1%
+}
+
+div.gallery img:hover {
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+}
+
+
+
+
+.myform fieldset {
+    border: 4px solid #9CCCCC;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+}
+
+.myform legend {
+    color: #312b38;
+    font-size: .85rem;
+}
+
+.myform label {
+    margin: .5rem;
+}
+
+.myform label, .myform select, .myform [type=text], .myform [type=tel], .myform [type=email], .myform textarea {
+    display: block;
+}
+
+.myform [type=text], .myform [type=tel], .myform select, .myform textarea, .myform [type=email] {
+    border: solid 1px #888;
+    padding: .3rem;
+    width: 250px;
+    border-radius: .3rem;
+    font-family: 'REM', sans-serif;
+    font-weight: 300;
+    
+}
+
+.myform textarea {
+    height: 8rem;
+    width: 17rem;
+    margin: .8rem 0;
+}
+
+.myform :required {
+    background-color: rgba(156,51,53,0.1)
+}
+
+.myform [type=submit] {
+    background-color: #e62320;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    color: #dfdbd3;
+    margin: 1rem 0 0 1vw;
+    font-family: 'REM', sans-serif;
+    font-weight: 700;
+}
+
+main, footer {
+    max-width: 64rem;
+    margin: 0 auto;
+}
